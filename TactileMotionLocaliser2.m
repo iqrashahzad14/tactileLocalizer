@@ -4,7 +4,8 @@
 % by Mohamed Rezk 2018
 % adapted by MarcoB and RemiG 2020
 
-%%version2 ISI=0.5
+% AUDITORY LOCALIZER-TACTILE LOCALIZER adapted by Iqra
+%  design2 ISI=0.5
 
 % Direction 0 : auditory cue says left, right for participant/actual  
 % Direction 180 : auditory cue says right, left for participant/actual 

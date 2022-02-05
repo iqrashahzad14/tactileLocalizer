@@ -1,9 +1,8 @@
 function cfg = setParameters
 
-    % AUDITORY LOCALIZER-TACTILE LOCALIZER
-    
-    
-    %%version2 ISI=0.5
+    % AUDITORY LOCALIZER-TACTILE LOCALIZER adapted by Iqra
+
+    %  design2 ISI=0.5
 
 
     % Initialize the parameters and general configuration variables
@@ -53,8 +52,8 @@ function cfg = setParameters
     cfg.design.names = {'motion'; 'static'};
     % 0: L--R--L; 180: R--L--R; 270: UDU; 90: DUD
     cfg.design.motionDirections = [180 90];%[0 180 270 90]; %[0 180]
-    cfg.design.nbRepetitions = 10;
-    cfg.design.nbEventsPerBlock = 16;%6
+    cfg.design.nbRepetitions = 12; %x2 = number of blocks 
+    cfg.design.nbEventsPerBlock = 16;% 4 repetititions of the 4 directions
 
     %% Timing
 
@@ -68,9 +67,8 @@ function cfg = setParameters
     %     cfg.timing.eventDuration = 0.850; % second
 
     % Time between blocs in secs
-    cfg.timing.IBI = [5.8691    5.5432    6.4765    6.6958    5.0225    6.5777    5.6404    6.0738    5.9374    6.5624    5.4567    5.2934    5.0717    6.1504  5.8641    6.9503    5.1053    6.7020    5.7358    0  ];
+    cfg.timing.IBI = [6.64115128462964,6.07082142137597,5.25321985559689,6.09699425261356,5.31783353441364,6.97354113123756,5.71355871611769,6.43022250825241,6.35550551052564,5.13793917779026,6.34800416317818,6.43420027033546,6.14476216251430,6.82371356020611,6.40219187860096,6.44331536053155,6.54162278430294,5.25827008795920,6.11177432044627,5.48383606493868,5.17388745567759,5.23809327360416,5.48652527992660,0] ;
     %r = a + (b-a).*rand(N,1); r = 5 + (7-5)*rand(1,19);
-    %[5.73166537163980,5.42356704673122,5.80173768922465,5.07472657546192,6.35223601592911,5.82050495633080,6.83095731080948,5.33448611547333,5.19869196955382,6.62783897173142,5.39512903081210,5.76590866233150,6.18731514068680,5.62345174146246,6.98129781243476,6.86631244446354,6.50872737146921,5.97337227485308,6.38788903807745]
     % Time between events in secs
     cfg.timing.ISI = 2;
     % Number of seconds before the motion stimuli are presented
