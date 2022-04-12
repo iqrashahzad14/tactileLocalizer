@@ -49,7 +49,7 @@ function cfg = setParameters
     %     cfg.design.motionType = 'translation';
     %     cfg.design.motionType = 'radial';
     cfg.design.motionType = 'translation';
-    cfg.design.names = {'motion'; 'static'};
+    cfg.design.names = {'static';'motion' };
     % 0: L--R--L; 180: R--L--R; 270: UDU; 90: DUD
     cfg.design.motionDirections = [180 90];%[0 180 270 90]; %[0 180]
     cfg.design.nbRepetitions = 12; %x2 = number of blocks 
@@ -72,7 +72,7 @@ function cfg = setParameters
     % Time between events in secs
     cfg.timing.ISI = 2;
     % Number of seconds before the motion stimuli are presented
-    cfg.timing.onsetDelay = 5.25;
+    cfg.timing.onsetDelay = 4.75; %5.25; - 0.5 from the auditory cue script to compensate for tactile stimulation, this keeps 5.25s for tactile localizer
     % Number of seconds after the end all the stimuli before ending the run
     cfg.timing.endDelay = 14;
 
@@ -130,7 +130,7 @@ function cfg = setMonitor(cfg)
     cfg.color.black = [0 0 0];
     cfg.color.red = [255 0 0];
     cfg.color.grey = mean([cfg.color.black; cfg.color.white]);
-    cfg.color.background = cfg.color.grey;
+    cfg.color.background = cfg.color.black;
     cfg.text.color = cfg.color.white;
 
     % Monitor parameters
@@ -162,7 +162,7 @@ function cfg = setMRI(cfg)
 
     cfg.mri.repetitionTime = 1.75;
 
-    cfg.bids.MRI.Instructions = 'Detected the repeated stimulus';
+    cfg.bids.MRI.Instructions = 'Detect the repeated stimulus';
     cfg.bids.MRI.TaskDescription = [];
     cfg.bids.mri.SliceTiming = [0, 0.9051, 0.0603, 0.9655, 0.1206, 1.0258, 0.181, ...
                               1.0862, 0.2413, 1.1465, 0.3017, 1.2069, 0.362, ...
