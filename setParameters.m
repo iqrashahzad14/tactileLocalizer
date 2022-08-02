@@ -49,7 +49,7 @@ function cfg = setParameters
     %     cfg.design.motionType = 'translation';
     %     cfg.design.motionType = 'radial';
     cfg.design.motionType = 'translation';
-    cfg.design.names = {'static';'motion' };
+    cfg.design.names = {'motion';'static' };
     % 0: L--R--L; 180: R--L--R; 270: UDU; 90: DUD
     cfg.design.motionDirections = [180 90];%[0 180 270 90]; %[0 180]
     cfg.design.nbRepetitions = 12; %x2 = number of blocks 
